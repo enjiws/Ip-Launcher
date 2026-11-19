@@ -1,16 +1,23 @@
-# Enjiws Launcher
+# Enjiws Launcher V0.2 — Liquid Glass
 
-An Android HOME launcher prototype with an iOS 26-inspired glass aesthetic.
+An Android HOME launcher prototype with a refined iOS-inspired Liquid Glass look.
 
-## Included
-- Android HOME/default launcher intent
-- Installed-app grid and app launching
-- Search field
-- Glass-style widgets and dock
-- Expandable Dynamic Island-style visual
-- In-app Control Center mockup
-- Lock-screen-inspired preview
-- GitHub Actions debug APK build
+## V0.2 changes
+- Refined translucent wallpaper, glass widgets, rounded icon tiles and dock.
+- Live clock/date and battery percentage widgets.
+- App grid search and a separate app-library page.
+- Swipe left/right to switch pages; swipe down to open the launcher Control Center.
+- Control Center shortcuts open Android's native Internet, Bluetooth, Airplane, Display and Sound settings where supported.
+- Expandable in-launcher Dynamic Island visual.
+- Reduced background work: clock refreshes every 30 seconds and app list is cached for the launcher session.
+
+## Android limitations
+This remains a third-party launcher, not a replacement for HyperOS System UI.
+- Lock Screen is an in-launcher preview; Android's secure lock screen remains in charge.
+- Notification Center and system status bar are still provided by Android/HyperOS.
+- Dynamic Island is visible inside the launcher only; it is not a system-wide overlay.
+- Control Center shortcuts open native settings; they do not silently toggle protected system radios.
+- Weather is intentionally not shown as live data until a real weather provider is configured.
 
 ## Build
 Requires JDK 17 and Android SDK platform 35.
@@ -19,12 +26,4 @@ Requires JDK 17 and Android SDK platform 35.
 gradle assembleDebug
 ```
 
-APK output:
-`app/build/outputs/apk/debug/app-debug.apk`
-
-## Install / activate
-Install the APK, press Home, then select **Enjiws Launcher** as the default Home app.
-You can also change it in Android Settings > Apps > Default apps > Home app.
-
-## Important Android limitations
-This is a third-party launcher, not a system UI replacement. The Control Center currently provides a visual preview and local demo toggles; it cannot directly toggle protected system radios or change system brightness without using Android system panels or privileged access. The lock screen is an in-app preview and does not replace Android's secure lock screen. Dynamic Island is an in-launcher visual component, not an overlay over other apps. Weather widget currently uses placeholder display data.
+APK output: `app/build/outputs/apk/debug/app-debug.apk`
