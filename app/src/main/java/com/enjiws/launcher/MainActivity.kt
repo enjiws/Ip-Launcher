@@ -217,7 +217,7 @@ private fun AppIcon(app: AppEntry, onClick: () -> Unit) {
                 val bmp = android.graphics.Bitmap.createBitmap(96, 96, android.graphics.Bitmap.Config.ARGB_8888)
                 val canvas = android.graphics.Canvas(bmp)
                 drawable.setBounds(0, 0, 96, 96); drawable.draw(canvas)
-                androidx.compose.ui.graphics.asImageBitmap(bmp)
+                bmp.asImageBitmap()
             },
             contentDescription = app.label,
             modifier = Modifier.size(52.dp).clip(RoundedCornerShape(15.dp))
@@ -252,7 +252,7 @@ private fun DockButton(icon: androidx.compose.ui.graphics.vector.ImageVector, la
 @Composable
 private fun LockPreview(onClose: () -> Unit) {
     Column(
-        Modifier.fillMaxWidth().weight(1f).clip(RoundedCornerShape(32.dp))
+        Modifier.fillMaxWidth().height(430.dp).clip(RoundedCornerShape(32.dp))
             .height(430.dp).background(Brush.verticalGradient(listOf(Color(0xFF364E78), Color(0xFF161C32), Ink)))
             .clickable(onClick = onClose).padding(22.dp),
         horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center
