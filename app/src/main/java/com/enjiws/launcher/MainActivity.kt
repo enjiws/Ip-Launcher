@@ -246,7 +246,7 @@ private fun EnjiwsLauncher() {
                 ControlCenter(
                     onClose = { showControl = false },
                     onInternet = { openPanel(context, Settings.Panel.ACTION_INTERNET_CONNECTIVITY) },
-                    onBluetooth = { openPanel(context, Settings.Panel.ACTION_BLUETOOTH) },
+                    onBluetooth = { openPanel(context, Settings.ACTION_BLUETOOTH_SETTINGS) },
                     onAirplane = { openAirplaneSettings(context) },
                     onDisplay = { openDisplaySettings(context) },
                     onSound = { openSoundSettings(context) }
